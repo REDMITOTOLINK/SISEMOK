@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>REDMITOTOLOCK – Social Unlock</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #111;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    header nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .hero .image {
+      flex: 1;
+      text-align: center;
+    }
+    .hero img { max-width: 300px; }
+    .hero .content {
+      flex: 1;
+      padding-left: 40px;
+    }
+    .hero h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #111;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .tags button {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+      color: #fff;
+    }
+    .tags .red {
+      background: #ef4444;
+    }
+    .tags .blue {
+      background: #3b82f6;
+    }
+    @media(max-width:768px){
+      .hero { flex-direction: column; text-align: center; }
+      .hero .content { padding: 20px 0 0; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">REDMITOTOLOCK</div>
+  <nav>
+    <a href="#create">Create link</a>
+    <a href="#features">Features</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+</header>
+
+<section id="create" class="hero">
+  <div class="image">
+    <img src="https://via.placeholder.com/300x500?text=App+Mockup" alt="App Mockup" />
+  </div>
+  <div class="content">
+    <h1>Create Your Link</h1>
+    <div class="tags">
+      <button class="red">– Subscribe</button>
+      <button class="red">– 2nd subscribe</button>
+      <button class="blue">+ Like & subscribe</button>
+      <button class="blue">+ Sub & hit bell</button>
+      <button class="blue">+ Like & com</button>
+      <button class="red">– Like video</button>
+      <button class="blue">+ Follow instagram</button>
+      <button class="blue">+ Follow facebook</button>
+      <button class="blue">+ Follow twitter</button>
+      <button class="blue">+ Join telegram</button>
+      <button class="blue">+ Join discord</button>
+    </div>
+    <p style="margin-top:20px; color:#555;">
+      Fill in the URLs in the unlock link generator below to start.
+    </p>
+    <div style="margin-top:30px;">
+      <a href="index.html#generator" style="display:inline-block;background:#ef4444;color:#fff;padding:12px 24px;border-radius:25px;text-decoration:none;">Get Started</a>
+    </div>
+  </div>
+</section>
+
+<section id="generator" style="padding:80px 20px;background:#f9f9f9;">
+  <div style="max-width:600px;margin:auto;background:#fff;padding:40px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+    <h2 style="text-align:center;margin-bottom:30px;color:#111;">Unlock Link Generator</h2>
+    <form id="form">
+      <input type="url" id="sub1" placeholder="Subscribe URL 1" required style="width:100%;margin-bottom:15px;padding:12px;border:1px solid #ccc;border-radius:6px;" />
+      <input type="url" id="sub2" placeholder="Subscribe URL 2" required style="width:100%;margin-bottom:15px;padding:12px;border:1px solid #ccc;border-radius:6px;" />
+      <input type="url" id="like" placeholder="Like Video URL" required style="width:100%;margin-bottom:15px;padding:12px;border:1px solid #ccc;border-radius:6px;" />
+      <input type="url" id="target" placeholder="Destination URL" required style="width:100%;margin-bottom:25px;padding:12px;border:1px solid #ccc;border-radius:6px;" />
+      <button type="submit" style="width:100%;background:#3b82f6;color:#fff;padding:14px;font-size:16px;border:none;border-radius:6px;cursor:pointer;">
+        GENERATE!
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- Features and FAQ placeholders -->
+<section id="features" style="padding:80px 20px;">
+  <h2 style="text-align:center;margin-bottom:40px;">Features</h2>
+  <p style="max-width:600px;margin:auto;color:#555;">[Insert feature descriptions here]</p>
+</section>
+
+<section id="faq" style="padding:80px 20px;background:#f9f9f9;">
+  <h2 style="text-align:center;margin-bottom:40px;">FAQ</h2>
+  <p style="max-width:600px;margin:auto;color:#555;">[Insert FAQ content here]</p>
+</section>
+
+<script>
+  document.getElementById('form').addEventListener('submit', e => {
+    e.preventDefault();
+    const sub1 = encodeURIComponent(document.getElementById('sub1').value);
+    const sub2 = encodeURIComponent(document.getElementById('sub2').value);
+    const like = encodeURIComponent(document.getElementById('like').value);
+    const target = encodeURIComponent(document.getElementById('target').value);
+    location.href = `unlock.html?sub1=${sub1}&sub2=${sub2}&like=${like}&target=${target}`;
+  });
+</script>
+
+</body>
+</html>

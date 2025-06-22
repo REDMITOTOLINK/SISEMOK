@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>REDMITOTOLOCK - Unlock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      background: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background: #000;
+      padding: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      text-align: left;
+      padding-left: 30px;
+    }
+    .box {
+      max-width: 400px;
+      background: #222;
+      margin: 60px auto;
+      padding: 40px 30px;
+      border-radius: 10px;
+    }
+    button {
+      width: 100%;
+      margin: 10px 0;
+      padding: 14px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .red { background: #dc2626; color: white; }
+    .blue { background: #3b82f6; color: white; }
+    .green { background: #22c55e; color: white; }
+    .done { opacity: 0.6; pointer-events: none; }
+    .progress-bar {
+      height: 4px;
+      background: lime;
+      width: 0%;
+      transition: width 0.5s ease;
+    }
+    #unlockBtn:disabled {
+      background: #444;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+
+<header>REDMITOTOLOCK</header>
+
+<div class="box">
+  <h2>Unlock Link</h2>
+  <p>Complete the actions and unlock the link</p>
+
+  <button id="btn1" class="red">Subscribe On Youtube</button>
+  <button id="btn2" class="red">Subscribe On Youtube</button>
+  <button id="btn3" class="blue">Like On Video</button>
+
+  <div class="progress-bar" id="progress-bar"></div>
+  <p id="progress-text">unlock progress 0/3</p>
+
+  <button id="unlockBtn" class="green" disabled>Unlock Link</button>
+</div>
+
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const sub1 = urlParams.get('sub1');
+  const sub2 = urlParams.get('sub2');
+  const like = urlParams.get('like');
+  const target = urlParams.get('target');
+
+  let completed = [false, false, false];
+  let progress = 0;
+
+  function completeAction(index, btnId, url) {
+    if (completed[index]) return;
+    const btn = document.getElementById(btnId);
+    btn.disabled = true;
+    btn.textContent = "Please wait 10s...";
+    window.open(url, "_blank");
+
+    setTimeout(() => {
+      completed[index] = true;
+      progress++;
+      btn.textContent = "✅ Completed";
+      btn.classList.add("done");
+      updateProgress();
+    }, 10000);
+  }
+
+  function updateProgress() {
+    const percent = (progress / 3) * 100;
+    document.getElementById("progress-bar").style.width = percent + "%";
+    document.getElementById("progress-text").textContent = `unlock progress ${progress}/3`;
+
+    if (progress === 3 && target) {
+      const unlockBtn = document.getElementById("unlockBtn");
+      unlockBtn.disabled = false;
+      unlockBtn.onclick = () => {
+        window.location.href = target;
+      };
+    }
+  }
+
+  document.getElementById("btn1").onclick = () => completeAction(0, "btn1", sub1);
+  document.getElementById("btn2").onclick = () => completeAction(1, "btn2", sub2);
+  document.getElementById("btn3").onclick = () => completeAction(2, "btn3", like);
+</script>
+
+</body>
+</html>
