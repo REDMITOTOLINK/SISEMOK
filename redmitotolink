@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>REDMITOTO | Bandar Slot Online Resmi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fff;
+    }
+    header, footer, nav {
+      background-color: #990000;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      display: flex;
+      padding: 20px;
+    }
+    .promo-img {
+      width: 50%;
+    }
+    .promo-img img {
+      width: 100%;
+    }
+    .promo-info {
+      width: 50%;
+      padding-left: 20px;
+    }
+    .promo-info h1 {
+      color: #333;
+    }
+    .buttons a {
+      display: inline-block;
+      background-color: red;
+      color: white;
+      padding: 10px 20px;
+      margin: 10px 5px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      box-shadow: 2px 2px 5px #888;
+    }
+    .price {
+      font-size: 24px;
+      color: red;
+      margin-top: 10px;
+    }
+    .price del {
+      color: #999;
+    }
+    footer nav a {
+      display: inline-block;
+      width: 20%;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>REDMITOTO</h1>
+</header>
+
+<nav>
+  <a href="https://redmitototerpercaya.com/register?referral_code=mikasaa">BANDAR SLOT ONLINE</a>
+  <a href="https://redmitototerpercaya.com/register?referral_code=mikasaa">SLOT ONLINE</a>
+  <a href="https://redmitototerpercaya.com/register?referral_code=mikasaa">LINK SLOT</a>
+  <a href="https://redmitototerpercaya.com/register?referral_code=mikasaa">LOGIN</a>
+  <a href="https://redmitototerpercaya.com/register?referral_code=mikasaa">DAFTAR</a>
+</nav>
+
+<div class="container">
+  <div class="promo-img">
+    <img src="images/redmitoto.png" alt="Promo REDMITOTO" />
+  </div>
+  <div class="promo-info">
+    <h1>REDMITOTO | Link Resmi Bandar Slot Online</h1>
+    <p>⭐️⭐️⭐️⭐️⭐️ <a href="https://redmitototerpercaya.com/register?referral_code=mikasaa">7.6457.274 Penilaian</a></p>
+    <p>Merek: <a href="https://redmitototerpercaya.com/register?referral_code=mikasaa">Slot Gacor</a></p>
+    <div class="buttons">
+      <a href="https://redmitototerpercaya.com/register?referral_code=mikasaa">LOGIN</a>
+      <a href="https://redmitototerpercaya.com/register?referral_code=mikasaa">DAFTAR SEKARANG</a>
+    </div>
+    <div class="price">
+      Rp.5.000 <del>Rp.100.000</del> -95% Discount
+    </div>
+    <p>Dibuat Oleh Admin Tasya Ardellia REDMITOTO</p>
+  </div>
+</div>
+
+
+
+<footer>
+  <nav>
+    <a href="https://redmitototerpercaya.com/register?referral_code=mikasaa">Bonus</a>
+    <a href="https://redmitototerpercaya.com/register?referral_code=mikasaa">Link</a>
+    <a href="https://api.whatsapp.com/send?phone=6285136135152">Whatsapp 1</a>
+    <a href="https://wa.link/q8utxh">Whatsapp 2</a>
+  </nav>
+</footer>
+
+</body>
+</html>
